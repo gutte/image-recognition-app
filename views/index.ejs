@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  
+  <div class="container">
+    <fieldset>
+      <form action="/" method="post">
+        <input autofocus name="imgURL" type="text" class="ghost-input" placeholder="Enter an image url!" required>
+        <input type="submit" class="ghost-button" value="Recognize this image!">
+      </form>
+    </fieldset>
+  </div>
+  <div>
+    <% if(message !== null){ %>
+      <p><%= message %></p>
+    <% } %>
+  </div>
+  <div>
+    <% if(imgURL !== null){ %>
+      <img src="<%= imgURL %>" style="width:300px;">
+    <% } %>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</body>
+
+</html>
